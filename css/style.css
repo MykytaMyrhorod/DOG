@@ -76,6 +76,9 @@ body{
     color: #170C04;
 }
 /* ---------------------header-top----------------------- */
+.header__container{
+    /* position: relative; */
+}
 .header-top{
     height: 6.25rem;
     display: flex;
@@ -119,3 +122,49 @@ body{
     margin-right: 2.375rem;
 }
 /* -------------------------------------------------------- */
+.header-content{
+    display: flex;
+}
+.header-content__left{
+
+}
+.header-content__title{
+    font-family: Poppins;
+    font-size: calc(70px + 20*((100vw - 320px)/(1170 - 320)));
+    font-weight: 700;
+    line-height: 120px;
+    /* max-width: 38.3125rem; */
+}
+.header-content__title_margin-bottom{
+    margin-bottom: 3rem;
+}
+.header-content__buy-details{
+    display: flex;
+    column-gap: 1.25rem;
+}
+.btn{
+    display: block;
+    padding: .75rem 1.875rem;
+    border: 1px solid rgba(226, 123, 58, 0.15);
+    border-radius: 1.5rem;
+    color: #E27B3A;
+    line-height: 24px;
+}
+.btn-orange{
+    background: #E27B3A;
+    color: #fff;
+}
+.header-content__right{ 
+}
+.header-content__dog{
+    position: relative;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+.header-backround{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 610px;
+    z-index: -1;
+}
