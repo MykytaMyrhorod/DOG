@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -16,7 +17,7 @@
                         <img class="header-top__logo" src="img/header/logo.svg" alt="logo">
                         <p class="header-top__title">DOG</p>
                     </div>
-                    <nav class="menu">
+                    <nav class="menu" id="menu">
                         <ul class="menu__list">
                             <li class="menu__link">
                                 <a href="#" class="menu__item">Products</a>
@@ -35,7 +36,9 @@
                     <div class="header-top__navigation">
                         <img class="header-top__navigation-img" src="img/header/search.svg" alt="search">
                         <img class="header-top__navigation-img" src="img/header/cart.svg" alt="cart">
-                        <img class="header-top__navigation-img" src="img/header/burger-menu.svg" alt="burger-menu">
+                        <button class="header-top__burger-menu" id="burger">
+                            <span></span><span></span><span></span>
+                        </button>
                     </div>
                 </div>
                 <div class="header-content">

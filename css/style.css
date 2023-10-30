@@ -58,6 +58,7 @@ body{
     overflow: clip;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .page{
     flex: 1 1 auto;
@@ -121,6 +122,43 @@ body{
     display: block;
     margin-right: 2.375rem;
 }
+/* --------------------Burger-menu----------------------- */
+.header-top__burger-menu{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    z-index: 4;
+    /* background-color: red; */
+}
+.header-top__burger-menu span{
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    left: 7.5px;
+    transition: background-color .5s, opacity .5s, transform .5s;
+}
+.header-top__burger-menu span:nth-child(1){
+    transform: translateY(-9px);
+}
+.header-top__burger-menu span:nth-child(2){
+
+}
+.header-top__burger-menu span:nth-child(3){
+    transform: translateY(9px);
+}
+/* -------------------------крестик для burger menu-------------------------- */
+.header.open .header-top__burger-menu span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+.header.open .header-top__burger-menu span:nth-child(2){
+    opacity: 0;
+}
+.header.open .header-top__burger-menu span:nth-child(3){
+    transform: translateY(0) rotate(-45deg); 
+}
 /* -------------------------------------------------------- */
 .header-content{
     display: flex;
@@ -167,4 +205,38 @@ body{
     right: 0;
     height: 610px;
     z-index: -1;
+}
+
+
+
+
+
+@media (max-width: 768px){
+    .header-top__burger-menu{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: aqua;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        transition: transform .5s;
+        padding-top: 70px;
+    }
+    .menu__list{
+        display: block;
+        text-align: center;
+    }
+    .menu__link{
+        padding: 30px;
+    }
+    .menu__link:not(:last-child){
+        margin: 0;
+    }
+    .header.open .menu{
+        transform: translateX(-100%);
+    }
 }
