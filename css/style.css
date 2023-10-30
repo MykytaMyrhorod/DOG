@@ -205,9 +205,13 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    height: 610px;
+    height: 100vh;
     z-index: -1;
+    object-fit: cover;
 }
+
+
+
 
 
 
