@@ -88,7 +88,7 @@ body{
     padding: .3125rem 0rem;
 }
 .header-top_margin-bottom{
-    margin-bottom: 7.375rem;
+    margin-bottom: 10.4%;
 }
 .header-top__logo-title{
     display: flex;
@@ -120,7 +120,7 @@ body{
 }
 .header-top__navigation-img:not(:last-child){
     display: block;
-    margin-right: 2.375rem;
+    margin-right: 2.3125rem;
 }
 /* --------------------Burger-menu----------------------- */
 .header-top__burger-menu{
@@ -168,10 +168,12 @@ body{
 }
 .header-content__title{
     font-family: Poppins;
-    font-size: calc(70px + 20*((100vw - 320px)/(1170 - 320)));
+    font-size: clamp(4.375rem, 9vw, 6.25rem);
+    /* font-size: calc(70px + 20*((100vw - 320px)/(1170 - 320))); */
     font-weight: 700;
     line-height: 120px;
-    /* max-width: 38.3125rem; */
+    max-width: 613px;
+    
 }
 .header-content__title_margin-bottom{
     margin-bottom: 3rem;
@@ -210,7 +212,6 @@ body{
 
 
 
-
 @media (max-width: 768px){
     .header-top__burger-menu{
         display: block;
@@ -238,5 +239,20 @@ body{
     }
     .header.open .menu{
         transform: translateX(-100%);
+    }
+    .header-content__dog{
+        display: none;
+    }
+    .header-content__buy-details{
+        justify-content: center;
+    }
+    .header-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-content__title{
+        max-width: 100%;
+        font-size: clamp( 1.875rem, 9vw, 4.375rem);
     }
 }
