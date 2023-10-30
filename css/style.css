@@ -55,7 +55,7 @@ body{
 /* -------------------------------------------------------- */
 .wrapper{
     min-height: 100%;
-    overflow: clip;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
